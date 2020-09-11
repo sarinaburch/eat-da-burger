@@ -1,14 +1,22 @@
 {
-  "name": "config",
+  "name": "eat-da-burger",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Deployed Link https://young-river-30031.herokuapp.com/",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarinaburch/eat-da-burger.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarinaburch/eat-da-burger/issues"
+  },
+  "homepage": "https://github.com/sarinaburch/eat-da-burger#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
