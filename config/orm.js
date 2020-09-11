@@ -77,3 +77,5 @@ function objToSql(ob) {
         });
       }
     };
+
+    module.exports = orm;
