@@ -1,19 +1,18 @@
-$(function() {
-    $("#create-update-form").on("submit", function (event) {
+$(function () {
+
+//eat burger
+    $(".devourMe").on("click", function(event) {
         event.preventDefault();
-
-        $("#devour_me").on("click", function (event) {
-            var id = $(this).data("id");
-            var devour = $(this).data("devour");
-
-            var newDevour = {
-                devoured: devour
-            };
         
+        var id = $(this).data("id");
+        var devour = {
+            devoured: 1
+        }
+
 
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
-            data: newDevour
+            data: devour
         }).then(
             function () {
 
@@ -22,10 +21,14 @@ $(function() {
 
             }
         )
-})
+    })
+//adding new burger 
+    $(".UpdateForm").on("submit", function(event) {
+        event.preventDefault();
+
         var newBurger = {
-            burger_name: $("#burger_name").val().trim(),
-            devoured: $("[name=devoured]:checked").val().trim()
+            burger_name: $("#newBurger").val().trim(),
+            devoured: 0
         };
         $.ajax("/api/burgers", {
             type: "POST",
