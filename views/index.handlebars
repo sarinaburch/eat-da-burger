@@ -1,0 +1,30 @@
+<h1>Burgers</h1>
+<div class="row">
+    <div class="col-sm-6">
+        <h2>Burgers To Eat</h2> 
+        {{#each burgers}}
+        {{#unless devoured}}
+        <p>
+            {{id}}. {{burger_name}}
+        </p>
+        {{/unless}}
+        {{/each}}
+      <button class="devour_me" data-id="{{id}}" data-devourMe=true>Devour!</button>
+  </div>
+    </div>
+    <div class="col-sm-6">
+        <h2>Burgers That Have Been Eaten!</h2>
+       
+    </div>
+
+    <div class="row">
+        <div class="center col-sm-12">
+            <h2>Add a Burger!</h2>
+            <form class="create-update-form" action="/" method="POST">
+            <div "form-group">
+                <p>Enter the burger you want to devour and click submit!</p>
+                <input type="text" id="ca" name="burger_name">
+            </div>
+            </form>
+        </div>
+    </div>
