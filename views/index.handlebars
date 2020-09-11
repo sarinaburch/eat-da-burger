@@ -10,26 +10,30 @@
             {{id}} 
             {{burger_name}}
         </p>
+        <button class="devour_me" data-id="{{id}}">Devour!</button>
         {{/unless}}
         {{/each}}
-      <button class="devour_me" data-id="{{id}}" data-devourMe=true>Devour!</button>
+      
   </div>
 
 
-    </div>
+    
     <div class="col-sm-6">
         <h2>Burgers That Have Been Eaten!</h2>
     </div>
-
+</div>
 
     <div class="row">
         <div class="center col-sm-12">
             <h2>Add a Burger!</h2>
-            <form class="create-update-form" action="/" method="POST">
+            <form class="create-update-form">
+
             <div "form-group">
                 <p>Enter the burger you want to devour and click submit!</p>
                 <input type="text" id="ca" name="burger_name">
             </div>
+
+            <button type="submit">Add Burger</button>
             </form>
         </div>
     </div>

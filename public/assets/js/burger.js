@@ -1,5 +1,5 @@
-$(function () {
-    $(".create-update-form").on("submit", function (event) {
+$(function() {
+    $("#create-update-form").on("submit", function (event) {
         event.preventDefault();
 
         $("#devour_me").on("click", function (event) {
@@ -9,7 +9,7 @@ $(function () {
             var newDevour = {
                 devoured: devour
             };
-        })
+        
 
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
@@ -22,7 +22,7 @@ $(function () {
 
             }
         )
-
+})
         var newBurger = {
             burger_name: $("#burger_name").val().trim(),
             devoured: $("[name=devoured]:checked").val().trim()
